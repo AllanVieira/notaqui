@@ -69,7 +69,7 @@
     function carregar(result) {
       $("#inicio").hide()
       $("#escolha").show()
-      var url = result.code
+      var url = result
       var chave = url.split('?')[1].split('=')[1].split('&')[0]
       var valor = url.split('?')[1].split('NF=')[1].split('&')[0]
       var icms = url.split('?')[1].split('ICMS=')[1].split('&')[0]
@@ -89,7 +89,7 @@
     
     var scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
       scanner.addListener('scan', function (content) {
-        console.log(content);
+        carregar(content);
       });
       Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {

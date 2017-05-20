@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Doa Nota</title>
+
+  <script   src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
+      
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="js/qrcodelib.js"></script>
+  <script type="text/javascript" src="js/webcodecamjs.js"></script>  
+
+  <style type="text/css">
+    body{
+      background: #8484ff;  
+    }    
+    canvas{
+      width: 50%;
+    }
+    .botoes{
+      width: 100%;
+      height: 80px;
+    }
+  </style>
+  
+</head>
+<body>
+  
+  <div id="inicio" class="container">
+    <h1 class="text-center">Aproxime a Nota no Local Indicado</h1>
+    <div class="text-center">
+      <canvas id="canvas"></canvas>  
+    </div>
+  </div>
+  <div id="escolha" class="container">
+    <p class="text-center"><strong>Chave:</strong><span id="chave"></span></p>
+    <p class="text-center"><strong>Valor: R$</strong><span id="valor"></span></p>
+    <p class="text-center"><strong>ICMS: R$</strong><span id="icms"></span></p>
+    <div class="row">
+      <h3 class="text-center">Escolha a Intituição de Destino :</h3>
+      <div class="col-lg-4">
+        <button class="btn btn-lg botoes">APAE</button>
+      </div>
+      <div class="col-lg-4">
+        <button class="btn btn-lg botoes">Remanço da Pedreira</button>
+      </div>
+      <div class="col-lg-4">
+        <button class="btn btn-lg botoes">Lar dos Idosos</button>
+      </div>
+    </div>
+  </div>
+  <div id="sucesso">
+    <h1 class="text-center">Doação realizada com sucesso!</h1>
+  </div>
+
+  <script type="text/javascript">    
+    $(document).ready( function(){
+      $("#inicio").hide()
+      $("#sucesso").hide()
+    });
+    function carregar(result) {
+      $("#inicio").hide()
+      $("#escolha").show()
+      var url = result.code
+      var chave = url.split('?')[1].split('=')[1].split('&')[0]
+      var valor = url.split('?')[1].split('NF=')[1].split('&')[0]
+      var icms = url.split('?')[1].split('ICMS=')[1].split('&')[0]
+      $("#chave").text(chave)
+      $("#valor").text(valor)
+      $("#icms").text(icms)
+    }
+    $('.botoes').on('click',function(){
+      $('#escolha').hide()
+      $('#sucesso').show()
+      setTimeout(function() {
+        $('#sucesso').hide()
+        $('#inicio').show()
+      }, 3000);
+    })
+    var arg = {
+      resultFunction: function(result) {
+        console.log(result)
+        carregar(result)
+      }
+    };
+    new WebCodeCamJS("canvas").init(arg).play();
+  </script>
+</body>
+</html>

@@ -33,39 +33,7 @@
     </div>
   </div>
   <!-- ESCOLHA -->
-  <div id="escolha" class="valores">
-   <div class="row">
-    <div class="col-md-6 col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <div class="row">
-            <div class="col-xs-3">
-              <i class="fa fa-tasks fa-5x"></i>
-            </div>
-            <div class="col-xs-9 text-right">
-              <div class="huge">R$ <span id="valor"></span></div>
-              <div>Valor da nota</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-sm-4">
-      <div class="panel panel-green">
-        <div class="panel-heading">
-          <div class="row">
-            <div class="col-xs-3">
-              <i class="fa fa-tasks fa-5x"></i>
-            </div>
-            <div class="col-xs-9 text-right">
-              <div class="huge">R$ <span id="icms"></span></div>
-              <div>Total de ICMS</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>  
-  </div>
+  <div id="escolha">
   <div class="row">
     <div class="col-md-12">
       <h3 class="text-center">Escolha a Intituição de Destino :</h3>
@@ -79,8 +47,30 @@
     <div class="col-lg-4 pula">
       <button class="btn btn-default btn-lg btn-block botoes" onclick="salvaNota('idosos')">Lar dos Idosos</button>
     </div>
-    <p><span id="chave"></span></p>
   </div>
+  <div class="row valores">
+    <div class="col-md-6 col-sm-2">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <div class="row">
+              <div class="huge">R$ <span id="valor"></span>
+              <div>Valor da nota</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-2">
+      <div class="panel panel-green">
+        <div class="panel-heading">
+          <div class="row">
+              <div class="huge">R$ <span id="icms"></span>
+              <div>Total de ICMS</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p><span id="chave"></span></p>  
+  </div> 
 </div>
 <!-- SUCESSO - DEU CERTO! -->
 <div id="sucesso">

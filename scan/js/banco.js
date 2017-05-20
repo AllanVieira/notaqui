@@ -71,29 +71,12 @@ function salvaNota(empresa){
 		icms: icms,
 		date: data
 	});
-	$.ajax({
-		url: 'https://notaparana.pr.gov.br/nfprweb/DoacaoDocumentoFiscalCadastrar',
-		type: 'POST',
-		dataType: 'json',
-		data: {
-			idItemTipoDocFiscal:null,
-			cnpjFornecedor:'',
-			chaveAcesso:'41170579851291000181650010006775271160384824',
-			dtDoc:'',
-			nrDoc:'',
-			vlDoc:'',
-			cnpjEntidade:'10874797000100',
-			documentoComChaveAcesso:'true'
-		},
-	})
-	.done(function() {
-		console.log("success");
-	})
-	.fail(function() {
-		console.log("error");
-	})
-	.always(function() {
-		console.log("complete");
-	});
-	
 }
+
+var ticketRef = ref.child("notas");
+var count = 0;
+ticketRef.on("notas", function(snapshot) {
+	var newTicket = snapshot.val();
+	count++;
+	console.log(count);
+});

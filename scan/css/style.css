@@ -1,6 +1,8 @@
   body{
-    background: #78A1C5;  
-  }    
+      background: url("../fundo.png"),-webkit-linear-gradient(right, #FFFFFF, #583f41);
+      background: url("../fundo.png"),-o-linear-gradient(right, #FFFFFF, #583f41);
+      background: url("../fundo.png"),linear-gradient(to left, #FFFFFF, #583f41);  
+      }    
   video{
     width: 100% !important;
     border-radius: 10px;
@@ -15,9 +17,6 @@
   .pula{
     padding: 25px;
   }
-  .valores{
-    padding-top: 20px;
-  }
   .panel-heading{
     border-color: #5cb85c;
     color: white;
@@ -27,14 +26,18 @@
     background-color: #5cb85c;
   }
   .huge{
-    font-size: 4em;
+    font-size: 2em;
+    padding-left: 15px;
   }
-
-.logo{
-  max-width: 80px;
-}
-    @media (max-width: 600px) {
-      .logo {
-        width: 50px;
-      }
+  .valores{
+    padding-top: 15px;
+  }
+  .logo{
+    padding-top: 10px;
+    max-width: 80px;
+  }
+  @media (max-width: 600px) {
+    .logo {
+      width: 50px;
     }
+  }

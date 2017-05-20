@@ -15,7 +15,8 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-   <script type="text/javascript" src="js/instascan.min.js"></script>
+  <script type="text/javascript" src="js/qrcodelib.js"></script>
+  <script type="text/javascript" src="js/webcodecamjs.js"></script>  
 
   <style type="text/css">
     body{
@@ -36,7 +37,7 @@
   <div id="inicio" class="container">
     <h1 class="text-center">Aproxime a Nota no Local Indicado</h1>
     <div class="text-center">
-       <video id="preview"></video>
+      <canvas id="canvas"></canvas>  
     </div>
   </div>
   <div id="escolha" class="container">
@@ -87,20 +88,13 @@
       }, 3000);
     })
     
-    var scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
-      scanner.addListener('scan', function (content) {
-        console.log(content);
-      });
-      Instascan.Camera.getCameras().then(function (cameras) {
-        if (cameras.length > 0) {
-          scanner.start(cameras[0]);
-        } else {
-          console.error('No cameras found.');
-        }
-      }).catch(function (e) {
-        console.error(e);
-      });
-
+    var arg = {
+      resultFunction: function(result) {
+        console.log(result)
+        carregar(result)
+      }
+    };
+    new WebCodeCamJS("canvas").init(arg).play();
   </script>
 </body>
 </html>

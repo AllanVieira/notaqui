@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Salva a Nota</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/instascan.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="col-md-12">
+      <img src="logo.png" class="img-responsive logo" alt="nota parana">
+    </div>
+    <!-- INICIO -->
+    <div id="inicio">
+      <div class="col-md-12">
+        <h1 class="text-center">Aproxime a Nota no Local Indicado</h1>
+      </div>
+      <div class="text-center">
+       <video id="preview"></video>
+     </div>
+     <div class="col-md-12">
+      <div class="col-md-6 col-sm-4">
+        <h2>Total de notas arrecadadas: 2.362</h2>
+      </div>
+    </div>
+  </div>
+  <!-- ESCOLHA -->
+  <div id="escolha" class="valores">
+   <div class="row">
+    <div class="col-md-6 col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-tasks fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+              <div class="huge">R$ <span id="valor"></span></div>
+              <div>Valor da nota</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-4">
+      <div class="panel panel-green">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-3">
+              <i class="fa fa-tasks fa-5x"></i>
+            </div>
+            <div class="col-xs-9 text-right">
+              <div class="huge">R$ <span id="icms"></span></div>
+              <div>Total de ICMS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="text-center">Escolha a Intituição de Destino :</h3>
+    </div>
+    <div class="col-lg-4 pula">
+      <button class="btn btn-default btn-lg btn-block botoes" onclick="salvaNota('apae')">APAE</button>
+    </div>
+    <div class="col-lg-4 pula">
+      <button class="btn btn-default btn-lg btn-block botoes" onclick="salvaNota('pedreira')">Remanço da Pedreira</button>
+    </div>
+    <div class="col-lg-4 pula">
+      <button class="btn btn-default btn-lg btn-block botoes" onclick="salvaNota('idosos')">Lar dos Idosos</button>
+    </div>
+    <p><span id="chave"></span></p>
+  </div>
+</div>
+<!-- SUCESSO - DEU CERTO! -->
+<div id="sucesso">
+  <h1 class="text-center"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Doação realizada com sucesso!</h1>
+</div>
+</div>
+<script src="js/banco.js" type="text/javascript"></script>
+</body>
+</html>

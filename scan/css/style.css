@@ -1,0 +1,40 @@
+  body{
+    background: #78A1C5;  
+  }    
+  video{
+    width: 100% !important;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+  }
+  canvas{
+    width: 100%;
+  }
+  .botoes{
+    height: 80px;
+  }
+  .pula{
+    padding: 25px;
+  }
+  .valores{
+    padding-top: 20px;
+  }
+  .panel-heading{
+    border-color: #5cb85c;
+    color: white;
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    border-radius: 5px;
+    background-color: #5cb85c;
+  }
+  .huge{
+    font-size: 4em;
+  }
+
+.logo{
+  max-width: 80px;
+}
+    @media (max-width: 600px) {
+      .logo {
+        width: 50px;
+      }
+    }

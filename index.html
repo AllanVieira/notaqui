@@ -63,9 +63,10 @@
 
   <script type="text/javascript">    
     $(document).ready( function(){
-      $("#inicio").hide()
+      $("#escolha").hide()
       $("#sucesso").hide()
     });
+
     function carregar(result) {
       $("#inicio").hide()
       $("#escolha").show()
@@ -77,6 +78,7 @@
       $("#valor").text(valor)
       $("#icms").text(icms)
     }
+
     $('.botoes').on('click',function(){
       $('#escolha').hide()
       $('#sucesso').show()
@@ -85,6 +87,7 @@
         $('#inicio').show()
       }, 3000);
     })
+    
     var arg = {
       resultFunction: function(result) {
         console.log(result)

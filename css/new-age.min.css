@@ -4,9 +4,17 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  
  */
-.logo{
-  height: 166px !important;  
- }
+@media (min-width: 600px){
+  .logo {
+  	height: 166px !important;
+   }
+}
+@media (max-width: 600px){
+  .logo {
+  	height: 70px !important;
+  	margin-top: -20px;
+   }
+}
  .texto-preto{
   color: black;
   font-weight: bold;

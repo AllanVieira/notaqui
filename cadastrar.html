@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cadastrar entidades para receber doação de nota fiscal pelo programa Nota Paraná. Cadastre-se agora.">
+  <meta name="author" content="SalvaNota">
+
+  <title>Salva Nota - Coleta de Doação de Notas Fiscais</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="lib/device-mockups/device-mockups.min.css">
+
+  <!-- Theme CSS -->
+  <link href="css/new-age.min.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script src="scan/js/jquery.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+      </head>
+      <body>
+        <div class="modal"></div>
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand page-scroll" href="#page-top"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a class="page-scroll" href="scan/">Doe Agora</a>
+                </li>
+                <li>
+                  <a class="page-scroll" href="index.html#sobre">Sobre</a>
+                </li>
+                <li>
+                  <a class="page-scroll" href="index.html#beneficios">Beneficios</a>
+                </li>
+                <li>
+                  <a class="page-scroll" href="index.html#planos">Planos</a>
+                </li>
+                <li>
+                  <a class="page-scroll" href="index.html#contato">Contato</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+        </nav>
+        <header>
+        <div class="container">
+          <div class="col-md-12">
+            <!-- Form Name -->
+              
+            <h1>Cadastrar nova entidade</h1>      
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Informe o CNPJ da sua entidade, para prosseguir o cadastro!</h3>
+              </div>
+              <div class="panel-body">
+                <div class="form-group cnpj">
+                  <label class="col-md-4 control-label" for="idNome">CNPJ</label>  
+                  <div class="col-md-5">
+                    <input id="cnpj" name="cnpj" type="text" placeholder="000.000.000/0000-00" class="form-control input-md" required>
+                    <button class="btn btn-block btn-info" name="btnAvanca" id="btnAvanca">Avançar...</button>
+                  </div>
+                </div>
+                <div id="formulario">
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="idNome">Razão Social</label>  
+                    <div class="col-md-5">
+                      <input id="razaosocial" name="razaosocial" type="text" placeholder="Razão Social" class="form-control input-md" required="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="idNome">Telefone</label>  
+                    <div class="col-md-5">
+                      <input id="telefone" name="telefone" type="text" placeholder="(21) 0000-0000" class="form-control input-md" required="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="idNome">Fantasia</label>  
+                    <div class="col-md-5">
+                      <input id="fantasia" name="fantasia" type="text" placeholder="Nome fantasia" class="form-control input-md" required="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="idDepto">Logradouro</label>  
+                    <div class="col-md-5">
+                      <input id="logradouro" name="logradouro" type="text" placeholder="Rua das Aves" class="form-control input-md" required="">
+                    </div>
+                  </div>
+                  <div class="form-inline">
+                    <label class="col-md-4 control-label" for="idUsuario">Complemento</label>  
+                    <div class="col-md-5">
+                      <input id="numero" name="numero" type="text" placeholder="Nro." class="form-control input-md" required="">
+                      <input id="complemento" name="complemento" type="text" placeholder="Complemento" class="form-control input-md">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="idSenha">Bairro</label>
+                    <div class="col-md-5">
+                      <input id="bairro" name="bairro" type="text" placeholder="Digite a senha" class="form-control input-md" required="">
+                    </div>
+                  </div>
+                  <div class="form-inline">
+                    <label class="col-md-4 control-label" for="idSenha">Cidade / Estado</label>
+                    <div class="col-md-5">
+                      <input id="cidade" name="cidade" type="text" placeholder="Cidade" class="form-control input-md" required="">
+                      <input id="uf" name="uf" type="text" placeholder="UF" class="form-control input-md" required="" maxlength="2">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="idSenha">CEP</label>
+                    <div class="col-md-5">
+                      <input id="cep" name="cep" type="text" placeholder="00000-000" class="form-control input-md" maxlength="12" required="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="idSenha">Responsável</label>
+                    <div class="col-md-5">
+                      <input id="responsavel" name="responsavel" type="text" placeholder="Nome da pessoa responsável!" class="form-control input-md" required="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="idSenha">E-mail</label>
+                    <div class="col-md-5">
+                      <input id="email" name="email" type="email" placeholder="E-mail" class="form-control input-md" required="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="idSenha">Senha</label>
+                    <div class="col-md-5">
+                      <input id="senha" name="senha" type="password" placeholder="Senha min. 6 dígitos" class="form-control input-md" required="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="idConfirmar"></label>
+                    <div class="col-md-5">
+                    </div>
+                  </div>
+                  <button id="idConfirmar" name="idConfirmar" class="btn btn-primary btn-block">Enviar cadastro</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </header>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+        <script>
+          var config = {
+            apiKey: "AIzaSyC6ywDHGPyv3mA7-BntxTUqw21c0X02GMQ",
+            authDomain: "nota-7fb52.firebaseapp.com",
+            databaseURL: "https://nota-7fb52.firebaseio.com",
+            projectId: "nota-7fb52",
+            storageBucket: "nota-7fb52.appspot.com",
+            messagingSenderId: "1026270155856"
+          };
+          firebase.initializeApp(config);
+          var db = firebase.database();
+          const rootRef = firebase.database().ref();
+
+          $body = $("body");
+          $(document).ready(function() {
+            $('#cnpj').mask('00.000.000/0000-00');
+            $("#formulario").hide();
+
+          });
+
+          var cnpj, data, nome, fantasia, telefone, logradouro, numero, municipio, bairro, uf, cep, email, senha, user;
+          $("#btnAvanca").click(function(){
+            cnpj = $('#cnpj').unmask().val();
+      //Verifica se já existe entidade cadastrada com este cnpj
+      var entidadesRef = firebase.database().ref('entidades');
+      entidadesRef.child(cnpj).once('value', function(snapshot) {
+        var exists = (snapshot.val() !== null);
+        console.log(exists);
+        if(!exists){
+          $body.addClass("loading");
+          var url = "https://www.receitaws.com.br/v1/cnpj/"+cnpj;
+          $.ajax({
+            url: url,
+            dataType: "jsonp",
+            success: function (data) {
+              if(data.status == "OK"){
+                nome = $('#razaosocial').val(data.nome);
+                fantasia = $('#fantasia').val(data.fantasia);
+                telefone = $('#telefone').val(data.telefone);
+                logradouro = $('#logradouro').val(data.logradouro);
+                numero= $('#numero').val(data.numero);
+                municipio = $('#cidade').val(data.municipio);
+                bairro = $('#bairro').val(data.bairro);
+                uf = $('#uf').val(data.uf);
+                cep = $('#cep').val(data.cep);
+                $("#btnAvanca").hide();
+                $("#formulario").show();
+                $body.removeClass("loading");
+              }else if(data.status = "ERROR"){
+                alert(data.message)
+              }
+            }
+          });
+        }else{
+          alert("Entidade já cadastrada!");
+        }
+      });
+    });
+
+          $("#idConfirmar").click(function(){
+            email = $('#email').val();
+            senha = $('#senha').val();
+      //Cria usuario com base no email e senha
+      firebase.auth().createUserWithEmailAndPassword(email, senha).then(function(user){
+        console.log(user);
+        user = firebase.auth().currentUser;
+        console.log("Passou o usuario!"+user.uid);
+        //Cria empresa
+        firebase.database().ref('entidades/'+cnpj).set({
+          detalhes:{
+            nome: nome.val(),
+            fantasia: fantasia.val(),
+            telefone: telefone.val(),
+            logradouro: logradouro.val(),
+            numero: numero.val(),
+            bairro: bairro.val(),
+            cidade: municipio.val(),
+            uf: uf.val(),
+            cep: cep.val()
+          },
+          usuarios:{
+            uid: user.uid
+          }
+        }).then(function(empresa){
+          console.log("Criou empresa!", empresa);
+        }),function(error){
+          console.log("Não foi - ", error);
+        };
+      },function(error){
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        alert(errorMessage);
+      });
+    });
+
+      //Se o usuario foi criado já está logado, verifica e prossegue cadastro, senão trata
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          uid = user.uid;
+          console.log(uid);
+        } else {
+
+        }
+      });
+      
+    </script>
+  </body>
+  </html>

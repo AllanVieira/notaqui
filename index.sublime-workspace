@@ -1,0 +1,361 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"aja",
+				"ajax\tGoogle AJAX Libraries: jQuery"
+			],
+			[
+				"glyphicon-sh",
+				"glyphicon-shopping-cart \tBootstrap 3 Class"
+			],
+			[
+				"text",
+				"text-center \tBootstrap 3 Class"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"img",
+				"img-responsive \tBootstrap 3 Class"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"labe",
+				"label\t<label>"
+			],
+			[
+				"whi",
+				"width"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"u",
+				"url()"
+			],
+			[
+				"conta",
+				"container \tBootstrap 3 Class"
+			],
+			[
+				"image",
+				"background-image"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"container",
+				"container-fluid \tBootstrap 3 Class"
+			],
+			[
+				"col-md-",
+				"col-md-6 \tBootstrap 3 Class"
+			],
+			[
+				"a",
+				"authfire\tAuthenticate Client"
+			],
+			[
+				"fire",
+				"firebase"
+			],
+			[
+				"fireb",
+				"firebaseUser"
+			],
+			[
+				"html",
+				"html5\tSimple HTML5 Boilerplate"
+			],
+			[
+				"user",
+				"userSchema"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"b",
+				"bodyParser"
+			],
+			[
+				"fu",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "inde",
+		"selected_items":
+		[
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/opt/lampp/htdocs/notaqui"
+	],
+	"file_history":
+	[
+		"/opt/lampp/htdocs/forest/pagseguro-php-sdk/source/Configuration/Configure.php",
+		"/opt/lampp/htdocs/forest/index.html",
+		"/tmp/fz3temp-1/.htaccess 2",
+		"/opt/lampp/htdocs/pizzaja/torpedo/index.html",
+		"/home/emannuell/Projetos/sendSMS/mensagem.xml",
+		"/home/emannuell/Projetos/sendSMS/makeCall.py",
+		"/home/emannuell/Projetos/sendSMS/sendSMS.py",
+		"/opt/lampp/htdocs/forest/style.css",
+		"/opt/lampp/htdocs/forest/pagseguro/index.php",
+		"/opt/lampp/htdocs/forest/pagamento.php",
+		"/opt/lampp/htdocs/pizzaja/landing-page/index.html",
+		"/tmp/fz3temp-1/wp-config.php",
+		"/opt/lampp/htdocs/smkbd/index.html",
+		"/opt/lampp/htdocs/smkbd/css/style.css",
+		"/opt/lampp/htdocs/firebase/index.js",
+		"/opt/lampp/htdocs/mater-dei/faculdade-materdei-site/README.md",
+		"/opt/lampp/htdocs/pizzaja/landing-page/index-end.html",
+		"/opt/lampp/htdocs/firebase/index.html",
+		"/opt/lampp/htdocs/drink_coffee/index.android.js",
+		"/home/emannuell/Projetos/ChatterBot/setup.py",
+		"/home/emannuell/Projetos/ChatterBot/requirements.txt",
+		"/home/emannuell/Projetos/ChatterBot/runtests.py",
+		"/opt/lampp/htdocs/sudovalley/index2.html",
+		"/opt/lampp/htdocs/sudovalley/css/style.css",
+		"/home/emannuell/rastreador/package.json",
+		"/home/emannuell/rastreador/app.js",
+		"/opt/lampp/htdocs/pizzaja/landing-page/pizzaria/enviar.php",
+		"/opt/lampp/htdocs/pizzaja/landing-page/pizzaria/index.html"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"aplicati",
+			"sistema",
+			"social",
+			"h4",
+			"why_us",
+			"feature-desc",
+			"quetions",
+			"pizza j",
+			"thumbnail"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

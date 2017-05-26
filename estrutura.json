@@ -1,0 +1,21 @@
+"entidades":{
+	"cnpj":{
+		"nome": "",
+		"cidade": "",
+		"estado": "",
+		"tipo": "",
+		"usuarios":{
+			"UID": ""
+		}
+	}
+	"notas"{
+		"UID": ""
+	}
+}
+"notas"{
+	"NRONOTA":{
+		"entidade": "",
+		"timestamp": "",
+		"origem": ""
+	}
+}
